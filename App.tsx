@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {View, Text, StyleSheet, StatusBar} from 'react-native';
 import {colors} from './src/global/styles';
 import SignInScreen from './src/screens/authScreens/SignInScreen';
