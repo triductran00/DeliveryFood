@@ -2,9 +2,10 @@ import React, {useState, useRef} from 'react';
 import {View, Text, StyleSheet, Dimensions, TextInput} from 'react-native';
 import {colors, parameters, title} from "../../global/styles";
 import { Icon, Button, SocialIcon } from 'react-native-elements';
-import Header from '../../components/Header';
 import * as Animatable from 'react-native-animatable';
- export default function SignInScreen() {
+import Header from '../../components/Header';
+
+ export default function SignInScreen({navigation}) {
 
     const[textInput2Foccued, setTextInput2Foccued] = useState(false)
 
@@ -13,10 +14,10 @@ import * as Animatable from 'react-native-animatable';
 
     return (
         <View style = {styles.container}>
-            <Header title="MY ACCOUNT" type = "arrow-left"/>
+            <Header title="TÀI KHOẢN CỦA TÔI" type = "arrow-left" navigation = {navigation}/>
 
             <View style = {{marginLeft: 20, marginTop: 10}}>
-                <Text style = {title}>Sign-In</Text>
+                <Text style = {title}>Đăng Nhập</Text>
             </View>
 
             <View style = {{alignItems: "center",marginTop: 10}}>
@@ -45,7 +46,7 @@ import * as Animatable from 'react-native-animatable';
 
                         <TextInput 
                             style = {{width: "80%"}}
-                            placeholder = "Password"       
+                            placeholder = "Mật khẩu"       
                             ref = {textInput2}      
                             onFocus= {()=>{
                                 setTextInput2Foccued(false)
@@ -69,24 +70,24 @@ import * as Animatable from 'react-native-animatable';
 
                 <View style = {{marginHorizontal: 20, marginTop: 30}}>
                     <Button 
-                         title = "SIGN IN"
+                         title = "ĐĂNG NHẬP"
                          buttonStyle = {parameters.styledButton}
                          titleStyle = {parameters.buttonTitle }
-
+                        
                     />
                 </View>
 
                 <View style = {{alignItems: "center", marginTop: 15}}>
-                    <Text style = {{...styles.text1, textDecorationLine: "underline"}} >Forgot Password?</Text>
+                    <Text style = {{...styles.text1, textDecorationLine: "underline"}} >Quên mật khẩu?</Text>
                 </View>
 
                 <View style = {{alignItems: "center", marginTop: 30, marginBottom: 30}}>
-                    <Text style = {{fontSize: 20, fontWeight: "bold"}}>OR</Text>
+                    <Text style = {{fontSize: 20, fontWeight: "bold"}}>HOẶC</Text>
                 </View>
                 
                 <View style = {{marginHorizontal: 10, marginTop: 10}}>
                     <SocialIcon 
-                        title = "Sign In With Facebook"
+                        title = "Đăng nhập với Facebook"
                         button 
                         type = "facebook"
                         style = {styles.SocialIcon}
@@ -96,7 +97,7 @@ import * as Animatable from 'react-native-animatable';
 
                 <View style = {{marginHorizontal: 10, marginTop: 10}}>
                     <SocialIcon 
-                        title = "Sign In With  Google"
+                        title = "Đăng nhập với Google"
                         button 
                         type = "google"
                         style = {styles.SocialIcon}
@@ -160,7 +161,7 @@ import * as Animatable from 'react-native-animatable';
         alignContent: "center",
         justifyContent: "center",
         borderRadius: 12,
-        borderWidrh: 1,
+        borderWidth: 1,
         borderColor: "#ff8c52",
         height: 48,
         paddingHorizontal: 20,
