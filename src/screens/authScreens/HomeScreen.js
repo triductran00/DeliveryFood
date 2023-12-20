@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList, Pressable, Image, Dimensions } from 'react-native';
 import { Icon } from 'react-native-elements';
-import HomeHeader from '../../components/HomeHeader';
 import { colors, parameters } from '../../global/styles';
+import CountDown from 'react-native-countdown-component';
+import HomeHeader from '../../components/HomeHeader';
 import { filterData, restaurantsData } from '../../global/Data';
 import FoodCard from '../../components/FoodCard';
+
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -20,7 +22,7 @@ export default function HomeScreen() {
                 stickyHeaderIndices = {[0]}
                 showsVerticalScrollIndicator = {true}
             >
-                <View>
+                <View style = {{backgroundColor: colors.cardbackground, paddingBottom: 51}}>
                     <View style = {{marginTop: 10, flexDirection: 'row', justifyContent: "space-evenly"}}> 
                         <TouchableOpacity
                             onPress = {()=>{
@@ -65,7 +67,7 @@ export default function HomeScreen() {
                                 size = {26}
                             />
 
-                            <Text style = {{marginLeft: 5}}>Now</Text>
+                            <Text style = {{marginLeft: 5}}>Bây giờ</Text>
                         </View>
                     </View>
 
@@ -116,6 +118,18 @@ export default function HomeScreen() {
                 </View>
 
                 <View>
+                    <View style = {{flexDirection: 'row', alignItems: "center"}}>
+                            <Text style = {{marginLeft: 15, fontSize: 16, marginTop: -10, marginRight: 5, color: colors.buttons}}>FLASH SALE</Text>
+                            <CountDown
+                                until = {3600}
+                                size = {14}
+                                digitStyle = {{backgroundColor: colors.lightgreen}}
+                                digitTxtStyle = {{color: colors.cardbackground}}
+                                timeToShow = {['M', 'S']}
+                                timeLables = {{m: 'Phút', s: 'Giây'}}
+                            />
+                    </View>
+
                     <FlatList 
                         style = {{marginTop: 10, marginBottom: 10}}
                         horizontal =  {true}
@@ -164,6 +178,29 @@ export default function HomeScreen() {
                         )}
                     />
                 </View>
+            
+                <View style = {styles.headerTextView}>
+                    <Text style = {styles.headerText}>Nhà hàng ở gần bạn</Text>
+                </View>
+
+                <View style = {{width: SCREEN_WIDTH, paddingTop: 10}}>
+                        {
+                            restaurantsData.map(item => (
+                                <View key = {item.id} style = {{paddingBottom: 20}}>
+                                     <FoodCard 
+                                    screenWidth = {SCREEN_WIDTH * 0.95}
+                                    images = {item.images}
+                                    restaurantName = {item.restaurantName}
+                                    farAway = {item.farAway}
+                                    businessAddress = {item.businessAddress}
+                                    averageReview = {item.averageReview}
+                                    numberOfReview = {item.numberOfReview}
+                                />
+                                </View>
+                            ))
+                        }
+                </View>
+
             </ScrollView>
         </View>
     )
@@ -215,7 +252,7 @@ const styles = StyleSheet.create({
     },
 
     headerText: {
-        color: colors.grey2,
+        color: colors.buttons,
         fontSize: 24,
         fontWeight: "bold",
         paddingLeft: 10
