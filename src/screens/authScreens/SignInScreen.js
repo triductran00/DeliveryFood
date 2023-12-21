@@ -73,7 +73,7 @@ import Header from '../../components/Header';
                          title = "ĐĂNG NHẬP"
                          buttonStyle = {parameters.styledButton}
                          titleStyle = {parameters.buttonTitle }
-                         onPress = {()=>{navigation.navigate('RootClientTabs')}}
+                         onPress = {()=>{navigation.navigate('DrawerNavigator')}}
                     />
                 </View>
 

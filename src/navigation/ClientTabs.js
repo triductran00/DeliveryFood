@@ -6,6 +6,7 @@ import HomeScreen from '../screens/authScreens/HomeScreen';
 import SearchScreen from '../screens/authScreens/SearchScreen';
 import MyOrdersScreen from '../screens/authScreens/MyOrdersScreen';
 import MyAccountScreen from '../screens/authScreens/MyAccountScreen';
+import RestaurantsMapScreen from '../screens/authScreens/RestaurantsMapScreen';
 
 const ClientTabs = createBottomTabNavigator();
 
@@ -31,8 +32,9 @@ export default function RootClientTabs(){
                                 color ={color}
                                 size ={size}
                             />
-                        )
-                    }
+                        ),
+                        headerShown: false
+                    }           
                 }
             />
 
@@ -49,7 +51,8 @@ export default function RootClientTabs(){
                                 color ={color}
                                 size ={size}
                             />
-                        )
+                        ),
+                        headerShown: false
                     }
                 }
             />
@@ -67,7 +70,8 @@ export default function RootClientTabs(){
                                 color ={color}
                                 size ={size}
                             />
-                        )
+                        ),
+                        headerShown: false
                     }
                 }
             />
@@ -85,10 +89,13 @@ export default function RootClientTabs(){
                                 color ={color}
                                 size ={size}
                             />
-                        )
+                        ),
+                        headerShown: false
                     }
+
                 }
             />
+
         </ClientTabs.Navigator>
     )
 }
