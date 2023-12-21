@@ -4,6 +4,9 @@ import {colors, parameters, title} from "../../global/styles";
 import { Icon, Button, SocialIcon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
 import Header from '../../components/Header';
+import DrawerNavigator
+ from '../../navigation/DrawerNavigator';
+import HomeScreen from './HomeScreen';
 
  export default function SignInScreen({navigation}) {
 
@@ -73,7 +76,7 @@ import Header from '../../components/Header';
                          title = "ĐĂNG NHẬP"
                          buttonStyle = {parameters.styledButton}
                          titleStyle = {parameters.buttonTitle }
-                         onPress = {()=>{navigation.navigate('DrawerNavigator')}}
+                         onPress = {()=>{navigation.navigate('HomeScreen')}}
                     />
                 </View>
 

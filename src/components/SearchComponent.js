@@ -12,7 +12,7 @@ export default function SearchComponent() {
     const navigation  = useNavigation();
     const [data, setData] =  useState([...filterData]);
     const [modalVisible, setModalVisible] = useState(false);
-    const [textInputFossued,setTextInputFossued] = useState(true);
+    const [textInputFoccued,setTextInputFoccued] = useState(true);
     const textInput = useRef(0);
 
 
@@ -59,14 +59,14 @@ export default function SearchComponent() {
                     <View style = {styles.view1}>
                         <View style ={styles.TextInput}>
                             <Animatable.View 
-                                    animation = {textInputFossued ? "fadeInRight" : "fadeInLeft"}
+                                    animation = {textInputFoccued ? "fadeInRight" : "fadeInLeft"}
                                     duration = {400}
                                     >
-                            <Icon name = {textInputFossued ? "arrow-back" : "search" }  
+                            <Icon name = {textInputFoccued ? "arrow-back" : "search" }  
                                 onPress = {()=>{
-                                        if(textInputFossued)
+                                        if(textInputFoccued)
                                         setModalVisible(false)
-                                        setTextInputFossued(true)
+                                        setTextInputFoccued(true)
                                             }}
                                     style = {styles.icon2} 
                                     type  ="material"
@@ -81,22 +81,22 @@ export default function SearchComponent() {
                                 ref = {textInput}
 
                                 onFocus = {()=>{
-                                    setTextInputFossued(true)
+                                    setTextInputFoccued(true)
                                 }} 
 
                                 onBlur = {()=>{
-                                    setTextInputFossued(false)
+                                    setTextInputFoccued(false)
                                 }}
 
                                 onChangeText ={handleSearch}
                             />
 
                             <Animatable.View
-                                     animation = {textInputFossued?"fadeInLeft":""}
+                                     animation = {textInputFoccued?"fadeInLeft":""}
                                     duration = {400}
                                     >
                             <Icon 
-                                name = {textInputFossued ? "cancel" : null } 
+                                name = {textInputFoccued ? "cancel" : null } 
                                 iconStyle ={{color:colors.grey3}}
                                 type ="material"
                                 style={{marginRight:-10}}
@@ -117,9 +117,9 @@ export default function SearchComponent() {
                        onPress = {() =>{
 
                             Keyboard.dismiss
-                            navigation.navigate("SearchResultScreen",{item:item.name})
+                            navigation.navigate("SearchResultScreen", {item:item.name})
                             setModalVisible(false)
-                            setTextInputFossued(true)
+                            setTextInputFoccued(true)
                                 }} >
                     <View style={styles.view2}>
                         <Text style={{color:colors.grey2, fontSize:15 }}>{item.name}</Text>

@@ -19,11 +19,11 @@ export default function DrawerNavigator() {
                 component = {RootClientTabs}
                 options = {{
                     title:'Client',
-                    drawerIcon: ({focussed,size}) =>(
+                    drawerIcon: ({focucced, size}) =>(
                         <Icon 
                             type = "material-community"
                             name = "home"
-                            color = {focussed ? '#7cc' :colors.grey2}
+                            color = {focucced ? '#7cc' :colors.grey2}
                             size = {size}
 
                         />
@@ -36,11 +36,11 @@ export default function DrawerNavigator() {
                     component ={BusinessConsoleScreen}
                     options = {{
                         title:'Business console',
-                        drawerIcon: ({focussed,size}) =>(
+                        drawerIcon: ({focucced, size}) =>(
                             <Icon 
                                 type = "material"
                                 name = "business"
-                                color = {focussed ? '#7cc' :colors.grey2}
+                                color = {focucced ? '#7cc' :colors.grey2}
                                 size = {size}
                             />
                         )
@@ -48,5 +48,4 @@ export default function DrawerNavigator() {
                 />
         </Drawer.Navigator>
     )
-
 }

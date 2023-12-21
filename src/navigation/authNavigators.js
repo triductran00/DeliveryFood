@@ -41,6 +41,15 @@ export default function AuthStack() {
             />
 
             <Auth.Screen 
+                name = "HomeScreen"
+                component = {HomeScreen}
+                options = {{
+                    headerShown: false,
+                    animation: 'fade_from_bottom'
+                }}
+            />
+            
+            <Auth.Screen 
                 name = "RestaurantMapScreen"
                 component = {RestauransMapScreen}
                 options = {{
