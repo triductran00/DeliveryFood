@@ -1,12 +1,12 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { colors } from '../global/styles';
-import { Icon } from 'react-native-elements';
-import HomeScreen from '../screens/authScreens/HomeScreen';
-import SearchScreen from '../screens/authScreens/SearchScreen';
-import MyOrdersScreen from '../screens/authScreens/MyOrdersScreen';
-import MyAccountScreen from '../screens/authScreens/MyAccountScreen';
-import RestaurantsMapScreen from '../screens/authScreens/RestaurantsMapScreen';
+import React from 'react'
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import {colors} from '../global/styles'
+import {Icon} from 'react-native-elements'
+import HomeScreen from '../screens/authScreens/HomeScreen'
+import SearchScreen from '../screens/authScreens/SearchScreen'
+import MyOrdersScreen from '../screens/authScreens/MyOrdersScreen'
+import MyAccountScreen from '../screens/authScreens/MyAccountScreen'
+import { ClientStack } from './clientStack';
 
 const ClientTabs = createBottomTabNavigator();
 
@@ -15,16 +15,16 @@ export default function RootClientTabs(){
 
     return(
         <ClientTabs.Navigator
-            tabBarOptions = {{
-                activeTintColor :colors.buttons
-            }}
-        >
+                    tabBarOptions = {{
+                        activeTintColor :colors.buttons
+                    }}
+                >
             <ClientTabs.Screen 
                 name ="HomeScreen"
-                component = {HomeScreen}
-                options = {
+                component ={HomeScreen}
+                options ={
                     {
-                        tabBarLabel: "Home",
+                        tabBarLabel : "Home",
                         tabBarIcon: ({color,size})=>(
                             <Icon 
                                 name ='home'
@@ -34,16 +34,16 @@ export default function RootClientTabs(){
                             />
                         ),
                         headerShown: false
-                    }           
+                    }
                 }
             />
 
             <ClientTabs.Screen 
-                name = "SearchScreen"
+                name ="SearchScreen"
                 component = {SearchScreen}
-                options = {
+                options ={
                     {
-                        tabBarLabel: "Tìm kiếm",
+                        tabBarLabel : "Search",
                         tabBarIcon: ({color,size})=>(
                             <Icon 
                                 name ='search'
@@ -55,14 +55,15 @@ export default function RootClientTabs(){
                         headerShown: false
                     }
                 }
+
             />
 
-            <ClientTabs.Screen 
+        <ClientTabs.Screen 
                 name ="MyOrdersScreen"
-                component = {MyOrdersScreen}
-                options = { 
+                component ={MyOrdersScreen}
+                options ={
                     {
-                        tabBarLabel: "Đơn hàng",
+                        tabBarLabel : "My Orders",
                         tabBarIcon: ({color,size})=>(
                             <Icon 
                                 name ='view-list'
@@ -74,14 +75,15 @@ export default function RootClientTabs(){
                         headerShown: false
                     }
                 }
+
             />
 
-            <ClientTabs.Screen 
-                name ="My Account"
-                component = {MyAccountScreen}
-                options = {
+        <ClientTabs.Screen 
+                name ="MyAccount"
+                component ={MyAccountScreen}
+                options ={
                     {
-                        tabBarLabel: "Tôi",
+                        tabBarLabel : "My Account",
                         tabBarIcon: ({color,size})=>(
                             <Icon 
                                 name ='person'
@@ -92,10 +94,9 @@ export default function RootClientTabs(){
                         ),
                         headerShown: false
                     }
-
                 }
-            />
 
+            />
         </ClientTabs.Navigator>
     )
 }
