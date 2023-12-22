@@ -16,7 +16,7 @@ export default function HomeHeader({navigation}) {
                     color = {colors.cardbackground}
                     size = {32}
                     onPress = {()=>{
-                        navigation.toggleDrawer();
+                        navigation.toggleDrawer()
                     }}
                 />
             </View>

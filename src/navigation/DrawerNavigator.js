@@ -12,12 +12,13 @@ export default function DrawerNavigator() {
     return(
         <Drawer.Navigator
                 drawerContent  = {props =><DrawerContent {...props} /> }
-            >
+        >
 
             <Drawer.Screen 
                 name = "RootClientTabs"
                 component = {RootClientTabs}
                 options = {{
+                    headerShown:false,
                     title:'Client',
                     drawerIcon: ({focucced, size}) =>(
                         <Icon 
@@ -27,7 +28,9 @@ export default function DrawerNavigator() {
                             size = {size}
 
                         />
+                        
                     )
+                    
                 }}
             />
 
