@@ -1,5 +1,5 @@
 import React, {useState,useContext,useEffect} from 'react';
-// import auth from '@react-native-firebase/auth';
+//import auth from '@react-native-firebase/auth';
 
 import {
   View,
@@ -28,11 +28,12 @@ import {
      } from 'react-native-elements'
 
 import {colors} from '../global/styles'
-// import { SignInContext } from '../contexts/authContext';
+//import { SignInContext } from '../contexts/authContext';
 
 export default function DrawerContent(props){
 
-    const {dispatchSignedIn} = useContext(SignInContext)
+    //const {dispatchSignedIn} = useContext(SignInContext)
+
 
 async function signOut(){
        
