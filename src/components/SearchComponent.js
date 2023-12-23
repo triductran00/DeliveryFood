@@ -1,5 +1,5 @@
 import React, { useState,useRef } from 'react'
-import { StyleSheet, Text, View, TouchableWithoutFeedback, Modal,TextInput, FlatList,TouchableOpacity, Keyboard } from 'react-native'
+import { StyleSheet, Text, View, TouchableWithoutFeedback, Modal,   TextInput, FlatList, TouchableOpacity, Keyboard } from 'react-native'
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
 import { Icon } from 'react-native-elements';
@@ -16,7 +16,7 @@ export default function SearchComponent() {
     const textInput = useRef(0);
 
 
-    const contains = ({name},query)=>{
+    const contains = ({name}, query)=>{
         if(name.includes(query)){
             return true;
         }
@@ -24,7 +24,7 @@ export default function SearchComponent() {
     }
 
 
-    const handleSearch = text =>{
+    const handleSearch = text => {
         const dataS = filter(filterData, userSearch =>{
             return contains(userSearch,text);
         })
@@ -33,7 +33,7 @@ export default function SearchComponent() {
     }
 
     return (
-        <View style = {{alignItems:"center"}}>
+        <View style = {{alignItems: "center"}}>
             <TouchableWithoutFeedback
                     onPress ={()=>{
                         setModalVisible(true)
@@ -42,11 +42,11 @@ export default function SearchComponent() {
                 <View style = {styles.SearchArea}>
                      <Icon name =  "search"   
                             style = {styles.searchIcon} 
-                            type ="material"
-                            iconStyle ={{marginLeft:5}}
+                            type = "material"
+                            iconStyle = {{marginLeft:5}}
                             size = {32}     
                             />
-                     <Text style ={{fontSize:15}}>Gà rán Texas</Text>
+                     <Text style = {{fontSize:15}}>Gà rán Texas</Text>
                 </View>
             </TouchableWithoutFeedback>
 
@@ -129,8 +129,6 @@ export default function SearchComponent() {
             keyExtractor={item => item.id}
 
              />             
-
-
                 </View>
         </Modal>
 
@@ -138,65 +136,66 @@ export default function SearchComponent() {
     )
 }
 
-
 const styles = StyleSheet.create({
-    container :{
-        flex:1
+    container: {
+        flex: 1
     },
 
-    text1:{
-        color:colors.grey3,
-        fontSize:16
+    text1: {
+        color: colors.grey3,
+        fontSize: 16
     },
 
-    TextInput:{
-        borderWidth:1,
-         borderRadius:12,
-         marginHorizontal:0,
-         borderColor:"#86939e",
-         flexDirection:"row",
-         justifyContent:"space-evenly",
-         alignContent:"center",
-         alignItems:"center",
-         paddingLeft:10,
-         paddingRight:10
-  
-      },
+    TextInput: {
+        borderWidth: 1,
+         borderRadius: 12,
+         marginHorizontal: 0,
+         borderColor: "#86939e",
+         flexDirection: "row",
+         justifyContent: "space-evenly",
+         alignContent: "center",
+         alignItems: "center",
+         paddingLeft: 10,
+         paddingRight: 10
+    },
 
-    SearchArea:{marginTop :10,
-        width:"94%",
-        height:50,
-        backgroundColor:colors.grey5,
-        borderRadius:12,
-        borderWidth:1,
-        borderColor:colors.grey4,
-        flexDirection:"row",
-        alignItems:"center"
-      },
+    SearchArea: {
+        marginTop: 10,
+        width: "94%",
+        height: 50,
+        backgroundColor: colors.grey5,
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: colors.grey4,
+        flexDirection: "row",
+        alignItems: "center"
+    },
 
-    searchIcon:{ fontSize:24,
-                  padding:5,
-                  color:colors.grey2,
-      },
+    searchIcon: { 
+        fontSize: 24,
+        padding: 5,
+        color: colors.grey2,
+    },
 
-    view1:{ height:70,
-            justifyContent:"center",
-            
-            paddingHorizontal:10,
-      },
+    view1: { 
+        height: 70,
+        justifyContent: "center",
+        paddingHorizontal: 10,
+    },
 
-    view2:{
+    view2: {
       flexDirection: 'row',
       padding: 15,
       alignItems: 'center',
     },
 
     icon2 :{ fontSize:24,
-            padding:5,
-            color:colors.grey2,
+            padding: 5,
+            color: colors.grey2,
     },
-    modal :{
-        flex:1
+
+    modal: {
+        flex: 1
     }
 
 })
