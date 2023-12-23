@@ -207,7 +207,7 @@ export default function HomeScreen({navigation}) {
             <View style = {styles.floatButton}>
                 <TouchableOpacity
                     onPress ={()=>{
-                        navigation.navigate('RestaurantMapScreen')
+                        navigation.navigate("RestaurantMapScreen");
                     }}
             >
                     <Icon 

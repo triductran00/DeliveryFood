@@ -1,6 +1,6 @@
-import React from 'react'
-import { StyleSheet, Text, View,ImageBackground,TouchableOpacity,FlatList } from 'react-native'
-import {Icon} from 'react-native-elements'
+import React from 'react';
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
+import {Icon} from 'react-native-elements';
 import {colors} from "../global/styles";
 import ProductCard from './ProductCard';
 
@@ -19,74 +19,70 @@ const SearchResultCard = ({
 }) => {
     return (
         <View>
-            <TouchableOpacity onPress ={OnPressRestaurantCard}>
-            <View style ={styles.view1}>
-                <View style ={{height:150}}>
+            <TouchableOpacity onPress = {OnPressRestaurantCard}>
+            <View style = {styles.view1}>
+                <View style = {{height:150}}>
                     <ImageBackground 
                         style = {{height:160}}
-                        source ={{uri:images}}
+                        source = {{uri:images}}
                         imageStyle = {styles.imageStyle}
                     />
 
-                  <View style ={styles.image}>                
-                      <Text style ={styles.text1}>{averageReview}</Text>
-                      <Text style ={styles.text2}> {numberOfReview} reviews</Text>
+                  <View style = {styles.image}>                
+                      <Text style = {styles.text1}>{averageReview}</Text>
+                      <Text style = {styles.text2}>{numberOfReview} reviews</Text>
                   </View>
 
                 </View>
 
-                <View style ={styles.view3}>
-                    <View style ={{paddingTop:5}}>
-                        <Text style ={styles.text5}>{restaurantName}</Text>    
+                <View style = {styles.view3}>
+                    <View style = {{paddingTop:5}}>
+                        <Text style = {styles.text5}>{restaurantName}</Text>    
                     </View>
                     
-                    <View style ={{flexDirection:"row"}}>
-                        <View style ={styles.view4}>
+                    <View style = {{flexDirection:"row"}}>
+                        <View style = {styles.view4}>
                             <Icon 
                                 name ="place"
                                 type ="material"
-                                color ={colors.CardComment}
-                                size ={18}
-                                iconStyle ={{marginTop:3,marginLeft:-3}}
+                                color = {colors.CardComment}
+                                size = {18}
+                                iconStyle = {{marginTop:3,marginLeft:-3}}
                             />
 
-                            <Text style ={styles.view5}>{farAway}Min</Text>
+                            <Text style = {styles.view5}>{farAway}Phút</Text>
                         </View>
-                        <View style ={{flex:9}}>
-                            <Text style ={styles.text6}>{businessAddress}</Text>
+                        <View style = {{flex:9}}>
+                            <Text style = {styles.text6}>{businessAddress}</Text>
                         </View>  
                     </View>
                 </View>
 
-              
             </View>
           
             </TouchableOpacity>
-            <View style ={{marginTop:5,paddingBottom:20}}>
+            <View style = {{marginTop:5,paddingBottom:20}}>
 
             <FlatList
-                style ={{backgroundColor:colors.cardbackground}}
+                style = {{backgroundColor:colors.cardbackground}}
                 data = {productData}
-                keyExtractor ={(item,index)=>index.toString()}
-                renderItem ={({item,index})=> (
-                            <ProductCard 
-                            image = {item.image}
-                            productName ={item.name}
-                            price ={item.price}
-                              />
+                keyExtractor = {(item, index)=>index.toString()}
+                renderItem = {({item, index})=> (
+                    <ProductCard 
+                        image = {item.image}
+                        productName ={item.name}
+                        price ={item.price}
+                    />
                 )}
                 horizontal ={true}
             />
                
             </View>
-
-
         </View>
     )
 }
 
 export default SearchResultCard
-
 
 const styles = StyleSheet.create({
 

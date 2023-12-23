@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View,Dimensions,FlatList } from 'react-native';
-import SearchResultCard from '../../components/SearchResultCard'
+import { StyleSheet, Text, View, Dimensions, FlatList } from 'react-native';
+import SearchResultCard from '../../components/SearchResultCard';
 import { restaurantsData } from "../../global/Data";
 import { colors } from "../../global/styles";
 
@@ -11,30 +11,30 @@ const SearchResultScreen = ({navigation, route}) => {
         <View style ={styles.container}>
             <View>
                 <FlatList 
-                     style ={{backgroundColor:colors.cardbackground}}
+                    style ={{backgroundColor: colors.cardbackground}}
                     data = {restaurantsData}
-                    keyExtractor ={(item,index)=>index.toString()}
-                    renderItem ={({item,index})=> (
+                    keyExtractor ={(item, index)=>index.toString()}
+                    renderItem ={({item, index})=> (
                         <SearchResultCard
                             screenWidth = {SCREEN_WIDTH}
                             images = {item.images}
-                            averageReview ={item.averageReview}
-                            numberOfReview ={item.numberOfReview}
-                            restaurantName ={item.restaurantName}
-                            farAway ={item.farAway}
-                            businessAddress ={item.businessAddress}
-                            productData ={item.productData}
-                            OnPressRestaurantCard ={()=>{navigation.navigate("RestaurantHomeScreen", {id:index,restaurant:item.restaurantName})}}
+                            averageReview = {item.averageReview}
+                            numberOfReview = {item.numberOfReview}
+                            restaurantName = {item.restaurantName}
+                            farAway = {item.farAway}
+                            businessAddress = {item.businessAddress}
+                            productData = {item.productData}
+                            OnPressRestaurantCard = {()=>{navigation.navigate("RestaurantHomeScreen", {id:index, restaurant: item.restaurantName})}}
                         />          
                           )}
 
                      ListHeaderComponent ={
                         <View>
-                            <Text style ={styles.listHeader}>{restaurantsData.length} Kết quả: {route.params.item}</Text>
+                            <Text style = {styles.listHeader}>{restaurantsData.length} Kết quả: {route.params.item}</Text>
                         </View>
                      }   
 
-                     showsVerticalScrollIndicator ={false}
+                     showsVerticalScrollIndicator = {false}
                 />
             </View>
            

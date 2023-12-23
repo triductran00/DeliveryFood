@@ -26,9 +26,7 @@ export default function DrawerNavigator() {
                             name = "home"
                             color = {focucced ? '#7cc' :colors.grey2}
                             size = {size}
-
                         />
-                        
                     )
                     
                 }}

@@ -27,7 +27,7 @@ useLayoutEffect(()=>{
                 component ={SearchScreen}
                 options = {
                     ()=>({
-                        headerShown:false
+                        headerShown: false
                     })
                 }
             />

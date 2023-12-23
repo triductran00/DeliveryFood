@@ -1,7 +1,7 @@
 import React from 'react'
-import {View, Text,StyleSheet,FlatList,ImageBackground,Dimensions,TouchableWithoutFeedback, ImageBackgroundComponent} from 'react-native'
-import SearchComponent from '../../components/SearchComponent'
-import { filterData2 } from "../../global/Data"
+import {View, Text, StyleSheet, FlatList, ImageBackground,Dimensions, TouchableWithoutFeedback, ImageBackgroundComponent} from 'react-native'
+import SearchComponent from '../../components/SearchComponent';
+import { filterData2 } from "../../global/Data";
 import { colors } from "../../global/styles";
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -9,7 +9,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 export default function SearchScreen({navigation}){
 
     return(
-        <View style ={{flex:1,marginBottom:10,paddingTop:20}}>
+        <View style ={{flex: 1,marginBottom: 10,paddingTop: 20}}>
            
                 <SearchComponent />
             <View style ={{marginTop:10}}>
@@ -19,7 +19,7 @@ export default function SearchScreen({navigation}){
                     style ={{}}
                     data = {filterData2}
                     keyExtractor ={item=>item.id}
-                    renderItem = {({item,index})=>(
+                    renderItem = {({item, index})=>(
                         <TouchableWithoutFeedback
                                  onPress ={()=>{
                                     navigation.navigate("SearchResultScreen", {item:item.name})
@@ -32,17 +32,17 @@ export default function SearchScreen({navigation}){
                                 >
                                     
                                 <View style ={styles.textView}>
-                                    <Text style ={{color:colors.cardbackground}}>{item.name}</Text>
+                                    <Text style ={{color: colors.cardbackground}}>{item.name}</Text>
                                 </View>
                                 </ImageBackground>  
                             </View>
                         </TouchableWithoutFeedback>
                     )}
 
-                    horizontal ={false}
+                    horizontal = {false}
                     showsverticalScrollIndicator = {false}
-                    numColumns ={2}
-                    ListHeaderComponent = { <Text style = {styles.listHeader}>Phổ biến</Text>}
+                    numColumns = {2}
+                    ListHeaderComponent = {<Text style = {styles.listHeader}>Phổ biến</Text>}
                     ListFooterComponent = {<Footer />}
                 />
                 </View>
@@ -51,7 +51,6 @@ export default function SearchScreen({navigation}){
         </View>
     )
 }
-
 
 
 const Footer = ()=>{
