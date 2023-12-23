@@ -8,10 +8,6 @@ import Header from '../../components/Header';
 <<<<<<< HEAD
 import DrawerNavigator from '../../navigation/DrawerNavigator';
 import HomeScreen from './HomeScreen';
-=======
-import auth from '@react-native-firebase/auth';
-import { SignInContext } from '../../contexts/authContext';;
->>>>>>> 729380cedb7041e75ea51104e529e56167551437
 
 export default function SignInScreen({navigation}){
 
