@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, FlatList } from 'react-native';
-import SearchResultCard from '../../components/SearchResultCard';
-import { restaurantsData } from "../../global/Data";
-import { colors } from "../../global/styles";
+import SearchResultCard from '../components/SearchResultCard';
+import { restaurantsData } from "../global/Data";
+import { colors } from "../global/styles";
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 

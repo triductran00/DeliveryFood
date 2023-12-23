@@ -1,8 +1,8 @@
 import React from 'react'
 import {View, Text, StyleSheet, FlatList, ImageBackground,Dimensions, TouchableWithoutFeedback, ImageBackgroundComponent} from 'react-native'
-import SearchComponent from '../../components/SearchComponent';
-import { filterData2 } from "../../global/Data";
-import { colors } from "../../global/styles";
+import SearchComponent from '../components/SearchComponent';
+import { filterData2 } from "../global/Data";
+import { colors } from "../global/styles";
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 

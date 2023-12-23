@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList, Pressable, Image, Dimensions } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { colors, parameters } from '../../global/styles';
+import { colors, parameters } from '../global/styles';
 import CountDown from 'react-native-countdown-component';
-import HomeHeader from '../../components/HomeHeader';
-import { filterData, restaurantsData } from '../../global/Data';
-import FoodCard from '../../components/FoodCard';
+import HomeHeader from '../components/HomeHeader';
+import { filterData, restaurantsData } from '../global/Data';
+import FoodCard from '../components/FoodCard';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 

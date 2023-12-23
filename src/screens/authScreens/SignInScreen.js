@@ -6,7 +6,7 @@ import { Icon, Button, SocialIcon} from 'react-native-elements';
 import { Formik } from 'formik';
 import Header from '../../components/Header';
 import DrawerNavigator from '../../navigation/DrawerNavigator';
-import HomeScreen from './HomeScreen';
+import HomeScreen from '../HomeScreen';
 import auth from '@react-native-firebase/auth';
 import { SignInContext } from '../../contexts/authContext';;
 
@@ -22,7 +22,7 @@ export default function SignInScreen({navigation}){
 
 async function signIn(data){
     try{
-    const {password,email} = data
+    const {password, email} = data
     const user = await auth().signInWithEmailAndPassword(email, password)
     if(user){
         dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:"signed-in"}})
@@ -40,13 +40,13 @@ async function signIn(data){
     return(
         <View style ={styles.container}>
 
-             <Header title ="MY ACCOUNT"  type ="arrow-left" navigation ={navigation}/>  
+             <Header title ="Tài khoản của tôi" type ="arrow-left" navigation ={navigation}/>  
 
-             <View style ={{marginLeft:20, marginTop:10}}>
-                 <Text style ={title}>Đăng Nhập</Text>
+             <View style = {{marginLeft:20, marginTop:10}}>
+                 <Text style = {title}>Đăng Nhập</Text>
              </View> 
 
-            <View style ={{alignItems:"center",marginTop:10}}>
+            <View style = {{alignItems:"center",marginTop:10}}>
                 <Text style = {styles.text1}>Hãy nhập email và password</Text>
                 <Text style = {styles.text1}>đã đăng ký với tài khoản của bạn</Text>
             </View>
@@ -61,26 +61,26 @@ async function signIn(data){
                     >
                     { (props)=>(
                 <View>
-                <View style ={{marginTop:20}}>
+                <View style = {{marginTop:20}}>
                 <View>
                     <TextInput 
-                      style ={styles.TextInput1}
-                      placeholder ="Email"
-                      ref ={textInpput1}
+                      style = {styles.TextInput1}
+                      placeholder = "Email"
+                      ref = {textInpput1}
                       onChangeText = {props.handleChange('email')}
-                      value ={props.values.email}
+                      value = {props.values.email}
                     />
                 </View>
 
 
 
-                <View style ={styles.TextInput2}>
-                <Animatable.View animation ={textInput2Fossued?"":"fadeInLeft"} duration={400} >
+                <View style = {styles.TextInput2}>
+                <Animatable.View animation = {textInput2Fossued?"":"fadeInLeft"} duration={400} >
                     <Icon 
                         name ="lock"
-                        iconStyle ={{color:colors.grey3}}
+                        iconStyle = {{color:colors.grey3}}
                         type ="material"
-                        style={{}}
+                        style = {{}}
                       
                         
                     />
@@ -88,13 +88,13 @@ async function signIn(data){
 
                      <TextInput 
                       style= {{flex:1}}
-                      placeholder ="Password"
-                      ref ={textInput2}
-                      onFocus ={()=>{
+                      placeholder ="Mật khẩu"
+                      ref = {textInput2}
+                      onFocus = {()=>{
                           setTextInput2Fossued(false)
                       }}
 
-                      onBlur ={()=>{
+                      onBlur = {()=>{
                           setTextInput2Fossued(true)
                       }}
                       onChangeText = {props.handleChange('password')}
@@ -104,10 +104,10 @@ async function signIn(data){
                 <Animatable.View animation ={textInput2Fossued?"":"fadeInLeft"} duration={400} >
                      
                         <Icon 
-                                name ="visibility-off"
-                                iconStyle ={{color:colors.grey3}}
-                                type ="material"
-                                style={{marginRight:10}}
+                                name = "visibility-off"
+                                iconStyle = {{color:colors.grey3}}
+                                type = "material"
+                                style = {{marginRight:10}}
                                 
                             />
 
@@ -116,27 +116,24 @@ async function signIn(data){
 
             </View>
 
-            <View style ={{marginHorizontal:20, marginTop:30}}>
+            <View style = {{marginHorizontal:20, marginTop:30}}>
                 <Button 
-                    title ="SIGN IN"
+                    title = "Đăng nhập"
                     buttonStyle = {parameters.styledButton}
                     titleStyle = {parameters.buttonTitle}
-                        onPress ={props.handleSubmit}
+                        onPress = {props.handleSubmit}
                    />
             </View>  
             </View>
                     )}
         </Formik>
 
-
-           
-
             <View style ={{alignItems:"center",marginTop:15}}>
                 <Text style ={{...styles.text1, textDecorationLine:"underline"}}>Quên mật khẩu?</Text>
             </View> 
 
             <View style ={{alignItems:"center",marginTop:30, marginBottom:30}}>
-                <Text style ={{fontSize:20, fontWeight:"bold"}}>OR</Text>
+                <Text style ={{fontSize:20, fontWeight:"bold"}}>Hoặc</Text>
             </View>    
 
             <View style ={{marginHorizontal:10,marginTop:10}}>

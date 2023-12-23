@@ -1,7 +1,7 @@
 import React, { useLayoutEffect }from 'react'
 import { createStackNavigator } from '@react-navigation/native-stack';
-import SearchScreen from '../screens/authScreens/SearchScreen';
-import SearchResultScreen from '../screens/authScreens/SearchResultScreen';
+import SearchScreen from '../screens/SearchScreen';
+import SearchResultScreen from '../screens/SearchResultScreen';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 const ClientSearch = createStackNavigator();

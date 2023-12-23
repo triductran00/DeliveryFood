@@ -1,6 +1,6 @@
 import React from 'react'
 import {createStackNavigator, TransitionPresets} from '@react-navigation/native-stack'
-import RestaurantsMapScreen from '../screens/authScreens/RestaurantsMapScreen';
+import RestaurantsMapScreen from '../screens/RestaurantsMapScreen';
 import DrawerNavigator from './DrawerNavigator';
 
 const App = createStackNavigator();

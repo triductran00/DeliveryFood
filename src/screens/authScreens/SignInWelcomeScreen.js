@@ -56,6 +56,7 @@ export default function SignInWelcomeScreen({navigation}) {
                        title = "Tạo tài khoản"
                        buttonStyle = {styles.createButton}
                        titleStyle = {styles.createButtonTitle}
+                       onPress = {()=>{navigation.navigate("SignUpScreen")}}
                     />
                 </View>
             </View>
