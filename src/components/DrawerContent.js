@@ -51,9 +51,9 @@ async function signOut(){
 }
 
          return(
-             <View style ={styles.container}>
+             <View style = {styles.container}>
                  <DrawerContentScrollView {...props}>
-                 <View style ={{backgroundColor:colors.buttons,}}>
+                 <View style = {{backgroundColor:colors.buttons,}}>
                 <View style = {{flexDirection:'row', alignItems:'center',
                                     paddingLeft:20,paddingVertical:10}}>
                     <Avatar 
@@ -75,14 +75,14 @@ async function signOut(){
                     <View style ={{flexDirection:'row', marginTop:0,}}>
                         <View style = {{marginLeft:10,alignItems:"center", justifyContent:"center" }}  >
                             <Text  style ={{fontWeight:'bold',color:colors.cardbackground,fontSize:18 }}>1</Text>
-                            <Text style ={{color:colors.cardbackground,fontSize:14}} >My Favorites</Text>
+                            <Text style ={{color:colors.cardbackground,fontSize:14}}>Yêu thích</Text>
                         </View>
                     </View>
 
                     <View style ={{flexDirection:'row', marginTop:0}}>
                          <View style = {{marginLeft:10,alignItems:"center", justifyContent:"center" }}  >
                             <Text  style ={{fontWeight:'bold',color:colors.cardbackground,fontSize:18 }}>0</Text>
-                            <Text style ={{color:colors.cardbackground,fontSize:14}} >My Cart</Text>
+                            <Text style ={{color:colors.cardbackground,fontSize:14}}>Giỏ hàng</Text>
                         </View>    
                     </View>
 
@@ -94,7 +94,7 @@ async function signOut(){
                 <DrawerItemList {...props} />
 
                 <DrawerItem 
-                    label = "Payment"
+                    label = "Thanh tóa"
                     icon = {({color,size})=>(
                         <Icon 
                             type ="material-community"
@@ -107,7 +107,7 @@ async function signOut(){
 
 
                 <DrawerItem 
-                    label = "Promotions"
+                    label = "Khuyến mãi"
                     icon = {({color,size})=>(
                         <Icon 
                             type ="material-community"
@@ -121,7 +121,7 @@ async function signOut(){
 
 
             <DrawerItem 
-                    label = "Settings"
+                    label = "Cài đặt"
                     icon = {({color,size})=>(
                         <Icon 
                             type ="material-community"
@@ -135,7 +135,7 @@ async function signOut(){
 
 
         <DrawerItem 
-                    label = "Help"
+                    label = "Trợ giúp"
                     icon = {({color,size})=>(
                         <Icon 
                             type ="material-community"
@@ -146,15 +146,11 @@ async function signOut(){
                     )}
                 />
 
-
-
-
-
        <View style ={{borderTopWidth:1, borderTopColor:colors.grey5}}>
             <Text style ={styles.preferences}>Preferences</Text>
 
             <View style ={styles.switchText}>
-                <Text style ={styles.darkthemeText}>Dark Theme</Text>
+                <Text style ={styles.darkthemeText}>Chế độ tối</Text>
                 <View style ={{ paddingRight:10}}>
                         <Switch 
                             trackColor = {{false: "#767577",true : "#81b0ff"}}
@@ -165,14 +161,11 @@ async function signOut(){
 
        </View>         
 
-
-
-     
                 </DrawerContentScrollView>  
 
                 
                 <DrawerItem 
-                    label = "Sign Out"
+                    label = "Đăng xuất"
                     icon = {({color,size})=>(
                         <Icon 
                             type ="material-community"

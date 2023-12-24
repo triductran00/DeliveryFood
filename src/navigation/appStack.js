@@ -20,7 +20,7 @@ return(
 
 <App.Screen 
  name ="RestaurantMapScreen"
- component = {RestaurantMapScreen}
+ component = {RestaurantsMapScreen}
  options ={{
      headerShown: false,
      ...TransitionPresets.RevealFromBottomAndroid
