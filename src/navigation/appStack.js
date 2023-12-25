@@ -1,5 +1,5 @@
 import React from 'react'
-import {createStackNavigator, TransitionPresets} from '@react-navigation/native-stack'
+import {createStackNavigator} from '@react-navigation/native-stack'
 import RestaurantsMapScreen from '../screens/RestaurantsMapScreen';
 import DrawerNavigator from './DrawerNavigator';
 
@@ -14,7 +14,7 @@ return(
  component ={DrawerNavigator}
  options ={{
      headerShown: false,
-     ...TransitionPresets.RevealFromBottomAndroid
+     animation: 'fade_from_bottom'
  }}
 /> 
 
@@ -23,7 +23,7 @@ return(
  component = {RestaurantsMapScreen}
  options ={{
      headerShown: false,
-     ...TransitionPresets.RevealFromBottomAndroid
+     animation: 'fade_from_bottom'
  }}
 /> 
 

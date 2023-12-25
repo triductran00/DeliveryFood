@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View,ScrollView,Image,Platform } from 'react-native'
-import {colors} from '../global/styles'
+import React, { Component } from 'react';
+import { Text, StyleSheet, View, ScrollView, Image, Platform } from 'react-native';
+import {colors } from '../global/styles';
 import { Icon, CheckBox } from 'react-native-elements';
 import { menuDetailedData } from '../global/Data';
 
@@ -18,83 +18,82 @@ export default class PreferenceScreen extends Component {
 
     render() {
         const index  = this.props.route.params.index
-        const {meal,details,price} = menuDetailedData[index];
-        
+        const {meal, details,price} = menuDetailedData[index];
         
         return (
             <View style ={styles.container}>
                 <ScrollView>
-                    <View style ={styles.header}>
+                    <View style = {styles.header}>
                         <Image
-                            style ={styles.backgroundImage}
-                            source ={{uri:"https://bukasapics.s3.us-east-2.amazonaws.com/macdo.png"}}
+                            style = {styles.backgroundImage}
+                            source = {{uri:"https://bukasapics.s3.us-east-2.amazonaws.com/macdo.png"}}
                         />
                      </View>
-                     <View style ={styles.bar}>
-                        <Text style ={styles.title}>Choose a preference</Text>
+                     <View style = {styles.bar}>
+                        <Text style = {styles.title}>Choose a preference</Text>
                      </View>
-                     <View style ={styles.view12}>
+                     <View style = {styles.view12}>
                         <Icon 
                             name ="arrow-left"
                             type = "material-community"
-                            color ={colors.cardbackground}
-                            size ={25}
-                            onPress ={()=>{this.props.navigation.goBack()}}
+                            color = {colors.cardbackground}
+                            size = {25}
+                            onPress = {()=>{this.props.navigation.goBack()}}
                         />
                      </View>
-                     <View style ={styles.view1}>
-                        <Text style ={styles.text1}>{meal}</Text>
-                        <Text style ={styles.text2}>{details}</Text>
+                     <View style = {styles.view1}>
+                        <Text style = {styles.text1}>{meal}</Text>
+                        <Text style = {styles.text2}>{details}</Text>
                      </View>
-                     <View style ={styles.view2}>
-                        <Text style ={styles.text3}>Choose a meal type</Text>
-                        <View style = {styles.view3}>
-                           <Text style ={styles.text4}>REQUIRED</Text>
+                     <View style = {styles.view2}>
+                        <Text style = {styles.text3}>Choose a meal type</Text>
+                        <View style =  {styles.view3}>
+                           <Text style = {styles.text4}>REQUIRED</Text>
                         </View>
                      </View>
-                     <View style ={styles.view4}>
-                        <View style ={styles.view5}>
-                            <View style ={styles.view6}>
+                     <View style = {styles.view4}>
+                        <View style = {styles.view5}>
+                            <View style = {styles.view6}>
                                <CheckBox 
                                   center
                                   checkedIcon = "dot-circle-o"
                                   uncheckedIcon = "circle-o"
-                                  checked ={true}
-                                  checkedColor ={colors.buttons}
+                                  checked = {true}
+                                  checkedColor = {colors.buttons}
 
                                 />
-                                <Text style ={styles.text5}>- - - - -</Text>
+                                <Text style = {styles.text5}>- - - - -</Text>
                             </View>
-                            <Text style ={styles.text6}>R{price.toFixed(2)}</Text>
+                            <Text style = {styles.text6}>R{price.toFixed(2)}</Text>
                         </View>
                      </View>
                      <View>
                        {this.state.preference.map(item=><View key ={item.id}>
-                          <View style ={styles.view7}>
-                             <Text style ={styles.text8}>{menuDetailedData[index].preferenceTitle[this.state.preference.indexOf(item)]}</Text>
+                          <View style = {styles.view7}>
+                             <Text style = {styles.text8}>{menuDetailedData[index].preferenceTitle[this.state.preference.indexOf(item)]}</Text>
                              {this.state.required[this.state.preference.indexOf(item)] &&
-                              <View style ={styles.view9}>
-                                  <Text style ={styles.text7}>{this.state.minimum_quantity[this.state.preference.indexOf(item)]} REQUIRED</Text>
+                              <View style = {styles.view9}>
+                                  <Text style = {styles.text7}>{this.state.minimum_quantity[this.state.preference.indexOf(item)]} REQUIRED</Text>
                               </View>
 
                              }
                           </View>
-                          <View style ={styles.view10}>
+                          <View style = {styles.view10}>
                               {item.map(items => 
-                                <View style ={styles.view4}>
-                                      <View style ={styles.view19}>
-                                          <View style ={styles.view6}>
+                                <View style = {styles.view4}>
+                                      <View style = {styles.view19}>
+                                          <View style = {styles.view6}>
                                             <CheckBox 
                                                 center
                                                 checkedIcon = "check-square-o"
                                                 uncheckedIcon = "square-o"
-                                                checked ={false}
-                                                checkedColor ={colors.buttons}
+                                                checked = {false}
+                                                checkedColor = {colors.buttons}
 
                                               />
-                                              <Text style ={{color:colors.grey2,marginLeft:-10}}>{items.name}</Text>
+                                              <Text style = {{color:colors.grey2,marginLeft:-10}}>{items.name}</Text>
                                           </View>
-                                          <Text style ={styles.text6}>R{items.price.toFixed(2)}</Text>
+                                          <Text style = {styles.text6}>R{items.price.toFixed(2)}</Text>
                                       </View>
                                   </View>
                      )}
@@ -104,33 +103,33 @@ export default class PreferenceScreen extends Component {
                        }
                      </View>
                 </ScrollView>
-                <View style ={styles.view13}>
-                    <Text style ={styles.text11}>Quantity</Text>
+                <View style = {styles.view13}>
+                    <Text style = {styles.text11}>Quantity</Text>
                 </View>
-                <View style ={styles.view14}>
-                   <View style ={styles.view15}>
+                <View style = {styles.view14}>
+                   <View style = {styles.view15}>
                       <Icon 
-                          name ="remove"
+                          name = "remove"
                           type = "material"
-                          color ={colors.black}
-                          size ={25}
-                          onPress ={()=>{}}
+                          color = {colors.black}
+                          size = {25}
+                          onPress = {()=>{}}
                             />
                    </View>  
-                   <Text style ={styles.text9}>1</Text>  
-                   <View style ={styles.view16}>
+                   <Text style = {styles.text9}>1</Text>  
+                   <View style = {styles.view16}>
                       <Icon 
                             name ="add"
                             type = "material"
-                            color ={colors.black}
-                            size ={25}
-                            onPress ={()=>{}}
+                            color = {colors.black}
+                            size = {25}
+                            onPress = {()=>{}}
                               />
                    </View> 
                 </View>
-                <View style ={styles.view17}>
-                    <View style ={styles.view18}>
-                        <Text style ={styles.text10}>Add 1 to Cart R78.21</Text>
+                <View style = {styles.view17}>
+                    <View style = {styles.view18}>
+                        <Text style = {styles.text10}>Add 1 to Cart R78.21</Text>
                     </View>
                 </View>
             </View>

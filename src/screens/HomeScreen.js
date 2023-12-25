@@ -203,11 +203,11 @@ export default function HomeScreen({navigation}) {
 
             </ScrollView>
 
-            {delivery &&         
+            { delivery &&         
             <View style = {styles.floatButton}>
                 <TouchableOpacity
                     onPress ={()=>{
-                        navigation.navigate("RestaurantMapScreen");
+                        navigation.navigate('RestaurantMapScreen');
                     }}
             >
                     <Icon 

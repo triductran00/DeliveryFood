@@ -45,13 +45,13 @@ const SearchResultScreen = ({navigation, route}) => {
 export default SearchResultScreen;
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
-      paddingTop: 20
+        paddingTop: 20
     },
 
-    listHeader:{
-        color :colors.grey1,
+    listHeader: {
+        color: colors.grey1,
         fontSize: 20,
         paddingHorizontal: 10,
         paddingVertical: 10,

@@ -3,6 +3,8 @@ import { createStackNavigator } from '@react-navigation/native-stack';
 import SearchScreen from '../screens/SearchScreen';
 import SearchResultScreen from '../screens/SearchResultScreen';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import MenuProductScreen from '../screens/MenuProductScreen';
+import PreferenceScreen from '../screens/PreferenceScreen';
 
 const ClientSearch = createStackNavigator();
 

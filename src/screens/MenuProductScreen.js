@@ -1,11 +1,12 @@
-import React ,{useState}from 'react'
-import { StyleSheet, Text, View,Dimensions} from 'react-native'
-import { Route1,Route2,Route3,Route4,Route5,Route6,Route7,Route8 } from './MenuTabs';
-import { restaurantsData,menu } from '../global/Data';
-const SCREEN_WIDTH = Dimensions.get('window').width
+import React ,{useState}from 'react';
+import { StyleSheet, Text, View,Dimensions} from 'react-native';
+import { Route1, Route2, Route3, Route4, Route5, Route6, Route7, Route8 } from './MenuTabs';
+import { restaurantsData, menu } from '../global/Data';
 import { TabView,TabBar } from 'react-native-tab-view';
-import {colors} from '../global/styles'
-import { Icon} from 'react-native-elements';
+import { colors } from '../global/styles'
+import { Icon } from 'react-native-elements';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const MenuProductScreen = ({navigation,route}) => {
     const [routes] = useState(menu)
@@ -15,10 +16,10 @@ const MenuProductScreen = ({navigation,route}) => {
     const renderTabBar = props =>(
         <TabBar 
             {...props}
-            indicatorStyle = {{backgroundColor:colors.cardbackground}}
+            indicatorStyle = {{backgroundColor: colors.cardbackground}}
             tabStyle = {styles.tabStyle}
             scrollEnabled = {true}
-            style ={styles.tab}
+            style = {styles.tab}
             labelStyle = {styles.tabLabel}
             contentContainerStyle = {styles.tabContainer}
         />

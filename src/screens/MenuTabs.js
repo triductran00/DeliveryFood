@@ -1,18 +1,18 @@
 import React from 'react';
-import { View, StyleSheet,FlatList,TouchableOpacity,Text} from 'react-native';
+import { View, StyleSheet, FlatList, TouchableOpacity, Text} from 'react-native';
 import { menuData, menuDetailedData } from '../global/Data'
 import MenuCard from '../components/MenuCard';
 
 export  function Route1({navigation}){
     return(
-        <View style ={{flex:1}}>
-            <View style ={styles.view2}>
+        <View style = {{flex:1}}>
+            <View style = {styles.view2}>
                 <FlatList 
-                    style ={{backgroundColor:'white'}}
+                    style = {{backgroundColor:'white'}}
                     data = {menuDetailedData}
-                    keyExtractor = {(item,index)=>index.toString()}
+                    keyExtractor = {(item, index)=>index.toString()}
                     renderItem = {({item,index})=>(
-                        <TouchableOpacity onPress ={()=>{navigation.navigate("PreferenceScreen",{index})}}>
+                        <TouchableOpacity onPress ={()=>{navigation.navigate("PreferenceScreen", {index})}}>
                             <MenuCard 
                                 productName ={item.meal}
                                 image ={item.image}
