@@ -1,11 +1,10 @@
-import React,{useState,useRef,useEffect,useContext} from 'react';
-
-import {View, Text, StyleSheet, Dimensions,Image,ScrollView} from 'react-native'
-import {colors, parameters,title} from "../../global/styles"
+import React, {useState, useRef, useEffect, useContext} from 'react';
+import {View, Text, StyleSheet, Dimensions,Image,ScrollView} from 'react-native';
+import {colors, parameters,title} from "../../global/styles";
 import { SignInContext } from '../../contexts/authContext';
 import auth from '@react-native-firebase/auth';
-import Swiper from 'react-native-swiper'
-import {Icon, Button,SocialIcon} from 'react-native-elements'
+import Swiper from 'react-native-swiper';
+import {Icon, Button,SocialIcon} from 'react-native-elements';
 
 export default function SignInWelcomeScreen({navigation}){
   const {dispatchSignedIn} = useContext(SignInContext)

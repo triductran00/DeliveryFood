@@ -1,9 +1,9 @@
-import React from 'react'
-import {createStackNavigator} from '@react-navigation/native-stack'
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import RestaurantsMapScreen from '../screens/RestaurantsMapScreen';
 import DrawerNavigator from './DrawerNavigator';
 
-const App = createStackNavigator();
+const App = createNativeStackNavigator();
 
 export function AppStack(){
 

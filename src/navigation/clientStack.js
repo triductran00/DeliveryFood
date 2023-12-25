@@ -1,12 +1,13 @@
-import React, { useLayoutEffect }from 'react'
-import { createStackNavigator } from '@react-navigation/native-stack';
+import React, { useLayoutEffect } from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SearchScreen from '../screens/SearchScreen';
 import SearchResultScreen from '../screens/SearchResultScreen';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import MenuProductScreen from '../screens/MenuProductScreen';
 import PreferenceScreen from '../screens/PreferenceScreen';
+import RestaurantHomeScreen from '../screens/RestaurantHomeScreen';
 
-const ClientSearch = createStackNavigator();
+const ClientSearch = createNativeStackNavigator();
 
 export  function ClientStack({navigation, route}) {
 
@@ -25,8 +26,8 @@ useLayoutEffect(()=>{
        <ClientSearch.Navigator>
 
             <ClientSearch.Screen 
-                name ="SearchScreen"
-                component ={SearchScreen}
+                name = "SearchScreen"
+                component = {SearchScreen}
                 options = {
                     ()=>({
                         headerShown: false
@@ -36,7 +37,7 @@ useLayoutEffect(()=>{
 
             <ClientSearch.Screen 
                 name ="SearchResultScreen"
-                component ={SearchResultScreen}
+                component = {SearchResultScreen}
                 options = {
                     ()=>({
                         headerShown: false
@@ -46,7 +47,7 @@ useLayoutEffect(()=>{
 
             <ClientSearch.Screen 
                 name ="RestaurantHomeScreen"
-                component ={RestaurantHomeScreen}
+                component = {RestaurantHomeScreen}
                 options = {
                     ()=>({
                         headerShown: false
@@ -56,7 +57,7 @@ useLayoutEffect(()=>{
 
             <ClientSearch.Screen 
                 name ="MenuProductScreen"
-                component ={MenuProductScreen}
+                component = {MenuProductScreen}
                 options = {
                     ()=>({
                         headerShown: false

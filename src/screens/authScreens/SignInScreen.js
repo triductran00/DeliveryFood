@@ -5,8 +5,6 @@ import * as Animatable from 'react-native-animatable';
 import { Icon, Button, SocialIcon} from 'react-native-elements';
 import { Formik } from 'formik';
 import Header from '../../components/Header';
-import DrawerNavigator from '../../navigation/DrawerNavigator';
-import HomeScreen from '../HomeScreen';
 import auth from '@react-native-firebase/auth';
 import { SignInContext } from '../../contexts/authContext';;
 
