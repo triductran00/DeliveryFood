@@ -33,7 +33,7 @@ import { SignInContext } from '../contexts/authContext';
 export default function DrawerContent(props){
 
     const {dispatchSignedIn} = useContext(SignInContext)
-
+    const [darkMode, setDarkMode] = useState(false);
 
 async function signOut(){
        
@@ -60,12 +60,12 @@ async function signOut(){
                         rounded
                         avatarStyle ={styles.avatar}
                         size = {75}
-                        source = {{uri:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png"}}
+                        source = {{uri:"https://ichef.bbci.co.uk/news/976/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg"}}
                     />
 
                     <View style ={{marginLeft:10}}>
-                        <Text style = {{fontWeight:'bold', color:colors.cardbackground, fontSize:18 }}>John Mark</Text>
-                        <Text style = {{color:colors.cardbackground, fontSize:14}}> john@xpressfood.com</Text>
+                        <Text style = {{fontWeight:'bold', color:colors.cardbackground, fontSize:18 }}>Trí Trí</Text>
+                        <Text style = {{color:colors.cardbackground, fontSize:14}}>tductri3@gmail.com</Text>
                     </View>
 
                 </View>
@@ -94,7 +94,7 @@ async function signOut(){
                 <DrawerItemList {...props} />
 
                 <DrawerItem 
-                    label = "Thanh tóa"
+                    label = "Thanh toán"
                     icon = {({color,size})=>(
                         <Icon 
                             type ="material-community"
@@ -147,7 +147,7 @@ async function signOut(){
                 />
 
        <View style ={{borderTopWidth:1, borderTopColor:colors.grey5}}>
-            <Text style ={styles.preferences}>Preferences</Text>
+            <Text style ={styles.preferences}>Hiển thị</Text>
 
             <View style ={styles.switchText}>
                 <Text style ={styles.darkthemeText}>Chế độ tối</Text>
@@ -155,6 +155,8 @@ async function signOut(){
                         <Switch 
                             trackColor = {{false: "#767577",true : "#81b0ff"}}
                             thumbColor = "#f4f3f4"
+                            value = {darkMode} 
+                            onValueChange = {(value) => setDarkMode(value)} 
                         />
                 </View>
             </View>

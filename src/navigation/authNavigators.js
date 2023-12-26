@@ -36,24 +36,6 @@ export default function AuthStack() {
                 }}
             />
 
-            {/* <Auth.Screen 
-                name = "DrawerNavigator"
-                component = {DrawerNavigator}
-                options = {{
-                    headerShown: false,
-                    animation: 'fade_from_bottom'
-                }}
-            />
-            
-            <Auth.Screen 
-                name = "RestaurantMapScreen"
-                component = {RestauransMapScreen}
-                options = {{
-                    headerShown: false,
-                    animation: 'fade_from_bottom'
-                }}
-            /> */}
-
         </Auth.Navigator>
     )
 }

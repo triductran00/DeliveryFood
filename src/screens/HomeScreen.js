@@ -217,7 +217,7 @@ export default function HomeScreen({navigation}) {
                         color = {colors.buttons}
                     />
 
-                    <Text style = {{color: colors.grey2}}>Map</Text>
+                    <Text style = {{color: colors.grey2}}>Bản đồ</Text>
                 </TouchableOpacity>
             </View>
             }

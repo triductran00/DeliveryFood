@@ -30,7 +30,7 @@ const SearchResultCard = ({
 
                   <View style = {styles.image}>                
                       <Text style = {styles.text1}>{averageReview}</Text>
-                      <Text style = {styles.text2}>{numberOfReview} reviews</Text>
+                      <Text style = {styles.text2}>{numberOfReview} đánh giá</Text>
                   </View>
 
                 </View>
@@ -50,7 +50,7 @@ const SearchResultCard = ({
                                 iconStyle = {{marginTop:3,marginLeft:-3}}
                             />
 
-                            <Text style = {styles.view5}>{farAway}Phút</Text>
+                            <Text style = {styles.view5}>{farAway} Phút</Text>
                         </View>
                         <View style = {{flex:9}}>
                             <Text style = {styles.text6}>{businessAddress}</Text>
@@ -70,8 +70,8 @@ const SearchResultCard = ({
                 renderItem = {({item, index})=> (
                     <ProductCard 
                         image = {item.image}
-                        productName ={item.name}
-                        price ={item.price}
+                        productName = {item.name}
+                        price = {item.price}
                     />
                 )}
                 horizontal ={true}

@@ -43,7 +43,7 @@ export default function RootClientTabs(){
                 component = {ClientStack}
                 options ={
                     {
-                        tabBarLabel : "Search",
+                        tabBarLabel : "Tìm kiếm",
                         tabBarIcon: ({color,size})=>(
                             <Icon 
                                 name ='search'
@@ -63,7 +63,7 @@ export default function RootClientTabs(){
                 component ={MyOrdersScreen}
                 options ={
                     {
-                        tabBarLabel : "My Orders",
+                        tabBarLabel : "Đơn hàng",
                         tabBarIcon: ({color,size})=>(
                             <Icon 
                                 name ='view-list'
@@ -83,7 +83,7 @@ export default function RootClientTabs(){
                 component ={MyAccountScreen}
                 options ={
                     {
-                        tabBarLabel : "My Account",
+                        tabBarLabel : "Tôi",
                         tabBarIcon: ({color,size})=>(
                             <Icon 
                                 name ='person'

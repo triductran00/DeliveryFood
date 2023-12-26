@@ -1,5 +1,5 @@
 import React ,{useState}from 'react';
-import { StyleSheet, Text, View,Dimensions} from 'react-native';
+import { StyleSheet, Text, View, Dimensions} from 'react-native';
 import { Route1, Route2, Route3, Route4, Route5, Route6, Route7, Route8 } from './MenuTabs';
 import { restaurantsData, menu } from '../global/Data';
 import { TabView, TabBar } from 'react-native-tab-view';

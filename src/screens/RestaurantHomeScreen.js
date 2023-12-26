@@ -15,9 +15,9 @@ const RestaurantHomeScreen = ({navigation, route}) => {
     const {id, restaurant} = route.params;
     const[routes] = useState([
         {key:'first',title:"MENU"},
-        {key:'second',title:"INFO"},
-        {key:'third',title:"REVIEWS"},
-        {key:'fourth',title:"GALLERY"},
+        {key:'second',title:"THÔNG TIN"},
+        {key:'third',title:"ĐÁNH GIÁ"},
+        {key:'fourth',title:"ẢNH"},
     ])
 
     const [index,setIndex] = useState(0);
@@ -80,7 +80,7 @@ const RestaurantHomeScreen = ({navigation, route}) => {
                         <Text style = {styles.text6}>Delivery</Text>
                         <View style = {styles.view9}>
                             <Text style = {styles.text9}>{restaurantsData[id].deliveryTime}</Text>
-                            <Text style = {styles.text11}>min</Text>
+                            <Text style = {styles.text11}>phút</Text>
                         </View>
 
                     </View>
@@ -108,7 +108,7 @@ const RestaurantHomeScreen = ({navigation, route}) => {
         <TouchableOpacity>
             <View style ={styles.view11}>
                 <View style ={styles.view12}>
-                    <Text style ={styles.text13}>View Cart</Text>
+                    <Text style ={styles.text13}>Xem giỏ hàng</Text>
                     <View style ={styles.view13}>
                         <Text style ={styles.text13}>0</Text>
                     </View>

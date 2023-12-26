@@ -39,7 +39,7 @@ export default function FoodCard({
                                 marginTop: 3
                             }}
                         />
-                        <Text style = {styles.Min}>{farAway} Min</Text>
+                        <Text style = {styles.Min}>{farAway} Phút</Text>
                     </View>
 
                     <View style = {{flex: 9, flexDirection: "row"}}>
@@ -52,7 +52,7 @@ export default function FoodCard({
             
             <View style = {styles.review}>
                 <Text style = {styles.average}>{averageReview}</Text>
-                <Text style = {styles.numberOfReview}>{numberOfReview} reviews</Text>
+                <Text style = {styles.numberOfReview}>{numberOfReview} đánh giá</Text>
             </View>
         </TouchableOpacity>
     )

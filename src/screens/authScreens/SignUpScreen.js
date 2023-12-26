@@ -20,7 +20,8 @@ async function signUp(values){
 
   try{
     await auth().createUserWithEmailAndPassword(email, password)
-    console.log("Tài khoản đã được tạo!!!")
+    console.log("Tài khoản đã được tạo!!!");
+    Alert.alert('Tài khoản đã được tạo!!!');
   }catch(error){
     if(error.code === 'auth/email-already-in-use'){
       Alert.alert(
@@ -115,8 +116,8 @@ async function signUp(values){
                                       <Text style = {styles.text3}> đồng ý với </Text>
                                       <Text style = {styles.text4}> Điều khoản </Text>
                                       <Text style = {styles.text3}> và </Text>
+                                      <Text style ={styles.text4}> Cam kết bảo mật</Text>
                                   </View>
-                                  <Text style ={styles.text4}> Cam kết bảo mật</Text>
                                   <Text style = {styles.text3}> của chúng tôi </Text>
                                </View>
                                <View style = {styles.view17}>
@@ -290,8 +291,9 @@ view15: {
     marginTop: 10
 },
 
-text3: {fontSize:13
-        },
+text3: {
+    fontSize: 13
+},
         
 view16: {
     flexDirection:'row'

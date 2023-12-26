@@ -6,7 +6,7 @@ export default function BusinessConsoleScreen(){
 
     return(
         <View style = {styles.container}>
-            <Text>Welcome to Business console</Text>
+            <Text>Trung tâm quản lý kinh doanh</Text>
         </View>
     )
 }

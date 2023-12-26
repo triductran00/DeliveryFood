@@ -8,32 +8,31 @@ import Header from '../../components/Header';
 import auth from '@react-native-firebase/auth';
 import { SignInContext } from '../../contexts/authContext';;
 
-
 export default function SignInScreen({navigation}){
 
     const {dispatchSignedIn} = useContext(SignInContext)
-
+    const [showPassword, setShowPassword] = useState(false);
     const[textInput2Fossued, setTextInput2Fossued] =useState(false)
     const textInpput1 = useRef(1)
     const textInput2 = useRef(2)
 
 
-async function signIn(data){
-    try{
-    const {password, email} = data
-    const user = await auth().signInWithEmailAndPassword(email, password)
-    if(user){
-        dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:"signed-in"}})
+    async function signIn(data) {
+        try {
+            const { password, email } = data;
+            const user = await auth().signInWithEmailAndPassword(email, password);
+            if (user) {
+                dispatchSignedIn({ type: "UPDATE_SIGN_IN", payload: { userToken: "signed-in" } });
+            }
+        } catch (error) {
+            Alert.alert(
+                error.name,
+                error.message
+            );
+        }
     }
-}
-    catch(error){
-        Alert.alert(
-            error.name,
-            error.message
-        )
-    }
+    
 
-}
 
     return(
         <View style ={styles.container}>
@@ -97,6 +96,7 @@ async function signIn(data){
                       }}
                       onChangeText = {props.handleChange('password')}
                       value = {props.values.password}
+                      secureTextEntry={!showPassword}
                     />
 
                 <Animatable.View animation ={textInput2Fossued?"":"fadeInLeft"} duration={400} >
@@ -106,7 +106,7 @@ async function signIn(data){
                                 iconStyle = {{color:colors.grey3}}
                                 type = "material"
                                 style = {{marginRight:10}}
-                                
+                                onPress={() => setShowPassword(!showPassword)}
                             />
 
                 </Animatable.View>
