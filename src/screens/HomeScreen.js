@@ -123,7 +123,7 @@ export default function HomeScreen({navigation}) {
                             <CountDown
                                 until = {3600}
                                 size = {14}
-                                digitStyle = {{backgroundColor: colors.lightgreen}}
+                                digitStyle = {{backgroundColor: colors.black}}
                                 digitTxtStyle = {{color: colors.cardbackground}}
                                 timeToShow = {['M', 'S']}
                                 timeLables = {{m: 'Phút', s: 'Giây'}}

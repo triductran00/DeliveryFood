@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-// import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 export default function RestaurantsMapScreen() {
   // Sample coordinates (replace with your desired location)

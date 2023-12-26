@@ -78,36 +78,36 @@ details:"Two 100% fresh beef burger patties that are hot,deliciously",id:0},
     
 export const menuData = [
     
-    {title:"BEEF",special:false,key:0, },
-    {title:"CHICKEN", special:false,key:1},
-    {title:"VEGGIE BURGER",special:false ,key:2},
-    {title:"FRIES& CORN",special:false ,key:3},
+    {title:"BÒ",special:false,key:0, },
+    {title:"GÀ", special:false,key:1},
+    {title:"BURGER CHAY",special:false ,key:2},
+    {title:"KHOAI TÂY CHIÊN & BẮP",special:false ,key:3},
     {title:"SALADS",special:false,key:4},
     {title:"HAPPY MEALS",special:false,key:5},
-    {title:"SAHRE BOX",special:false,key:6},
-    {title:"MILKSHAKES",special:false,key:7},
-    {title:"COLD DRINKS",special:false,key:8},
-    {title:"DESSERTS",special:false,key:9},
-    {title:"HOT DRINKS",special:false,key:10},
+    {title:"SHARE BOX",special:false,key:6},
+    {title:"SỮA LẮC",special:false,key:7},
+    {title:"ĐỒ UỐNG LẠNH",special:false,key:8},
+    {title:"TRÁNG MIỆNG",special:false,key:9},
+    {title:"ĐỒ UỐNG NÓNG",special:false,key:10},
   
     ] ;
   
   export const specialData =[
-    {title:"LIMITED OFFER",key:0},
+    {title:"ƯU ĐÃI GIỚI HẠN",key:0},
     {title:"GO CHILLI",key:1},
     {title:"GO CHEESE",key:2},
-    {title:"MCCHICKEN DELUXE PROMO",key:3},
+    {title:"MCCHICKEN DELUXE",key:3},
   ];    
   
   export const menu = [
-    { key: 1, title: 'BEEF' },
-    { key: 2, title: 'CHICKEN' },
-    { key: 3, title: 'VEGGIE BURGER' },
+    { key: 1, title: 'BÒ' },
+    { key: 2, title: 'GÀ' },
+    { key: 3, title: 'BURGER CHAY' },
     { key: 4, title: 'SHARE BOX' },
-    { key: 5, title: 'Happy Meals' },
-    { key: 6, title: 'Fries' },
-    { key: 7, title: 'Sides' },
-    { key: 8, title: 'Milkshakes' },
+    { key: 5, title: 'HAPPY MEALS' },
+    { key: 6, title: 'KHOAI TÂY CHIÊN' },
+    { key: 7, title: 'ĂN KÈM' },
+    { key: 8, title: 'SỮA LẮC' },
   ] 
 
 

@@ -37,15 +37,15 @@ export default function DrawerContent(props){
 
 async function signOut(){
        
-    try{
+    try {
         auth()
         .signOut()
         .then(
-            ()=>{console.log("USER SUCCESSFULLY SIGNED OUT")
+            ()=>{console.log("Đăng xuất thành công!!!")
             dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:null}})
         })
 
-    }catch(errot){
+    } catch(error){
         Alert.alert(error.code)
     }
 }

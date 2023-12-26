@@ -14,10 +14,10 @@ const RestaurantHomeScreen = ({navigation, route}) => {
 
     const {id, restaurant} = route.params;
     const[routes] = useState([
-        {key:'first',title:"MENU"},
-        {key:'second',title:"THÔNG TIN"},
-        {key:'third',title:"ĐÁNH GIÁ"},
-        {key:'fourth',title:"ẢNH"},
+        {key:'first', title:"MENU"},
+        {key:'second', title:"THÔNG TIN"},
+        {key:'third', title:"ĐÁNH GIÁ"},
+        {key:'fourth', title:"ẢNH"},
     ])
 
     const [index,setIndex] = useState(0);
@@ -28,7 +28,7 @@ const RestaurantHomeScreen = ({navigation, route}) => {
             indicatorStyle = {{backgroundColor:colors.cardbackground}}
             tabStyle = {styles.tabStyle}
             scrollEnabled = {true}
-            style ={styles.tab}
+            style = {styles.tab}
             labelStyle = {styles.tabLabel}
             contentContainerStyle = {styles.tabContainer}
         />
@@ -53,7 +53,7 @@ const RestaurantHomeScreen = ({navigation, route}) => {
                      <RestaurantHeader id ={id} navigation = {navigation} />
                      {restaurantsData[id].discount &&
                      <View style = {styles.view1}>
-                        <Text style = {styles.text1}>GET {restaurantsData[id].discount}% OFF ON FOOD TOTAL</Text>
+                        <Text style = {styles.text1}>GIẢM {restaurantsData[id].discount}% TRÊN TỔNG HÓA ĐƠN</Text>
                      </View>
                      }
                 <View style = {styles.view2}>
@@ -65,19 +65,19 @@ const RestaurantHomeScreen = ({navigation, route}) => {
                             <Text style = {styles.text4}>{restaurantsData[id].averageReview}</Text>
                             <Text style = {styles.text5}>{restaurantsData[id].numberOfReview}</Text>
                             <Icon name = "map-marker" type ="material-community" color = {colors.grey3} size = {15} />
-                            <Text style = {styles.text6}>{restaurantsData[id].farAway} mi away</Text> 
+                            <Text style = {styles.text6}>{restaurantsData[id].farAway} km </Text> 
                         </View>
                     </View>
                     <View style = {styles.view5}>
-                       <Text style = {styles.text6}>Collect</Text>
+                       <Text style = {styles.text6}>Nhận hàng</Text>
                        <View style = {styles.view7}>
                             <Text style = {styles.text7}>{restaurantsData[id].collectTime}</Text>
-                            <Text style = {styles.text8}>min</Text>
+                            <Text style = {styles.text8}>phút</Text>
                        </View>
 
                     </View>
                     <View style = {styles.view8}>
-                        <Text style = {styles.text6}>Delivery</Text>
+                        <Text style = {styles.text6}>Giao hàng</Text>
                         <View style = {styles.view9}>
                             <Text style = {styles.text9}>{restaurantsData[id].deliveryTime}</Text>
                             <Text style = {styles.text11}>phút</Text>
